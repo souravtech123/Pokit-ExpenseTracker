@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg , rgba(255, 255, 255, 0.498) , rgba(61, 36, 255, 0.548));
+    margin: 0;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 90px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 84);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.532) ;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #000231;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 25px;
+    margin-bottom: 40px;
+    text-align: center;
+    
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: 200px;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    background: #3a86ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #2f6fe0;
+}
+
+#left-amount {
+    margin-top: 10px;
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+}
+
+#expense-list {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+#expense-list li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.logo {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin-right: 50px;
+}
+
+.nav-links li a {
+    color: rgb(2, 0, 56);
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.2s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 40px;
+
+}
+
+.nav-links li a:hover {
+
+    color: white;
+}
+.nav-left img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+
+}
+
+
+
+/* Mobile Responsive */
+@media (max-width: 800px) {
+    .nav-links {
+        display: none;
+    }
+}
+
+/* HOW TO USE SECTION */
+.how-card {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 30px;
+    border-radius: 18px;
+    color: white;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+    animation: fadeIn 0.8s ease-in-out;
+    margin-top: 150px;
+}
+
+.how-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 14px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-align: center;
+    backdrop-filter: blur(4px);
+}
+
+.step:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.step p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

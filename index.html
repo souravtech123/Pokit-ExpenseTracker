@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="./generated-image.png" alt="">
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#salary-section">Salary</a></li>
+        <li><a href="#expense-section">Expense</a></li>
+        <li><a href="#chart-section">Chart</a></li>
+        <li><a href="/">Contact</a></li>
+    </ul>
+</nav>
+
+
+    <h1 class="title">Smarter Spending Starts Here</h1>
+
+    <div class="container">
+
+        <!-- SALARY CARD -->
+        <div class="card">
+            <h2>Monthly Salary</h2>
+            <label>Enter Salary</label>
+            <input id="salary" type="number" placeholder="Enter your monthly income">
+            <button id="confirm-salary-btn" class="btn">Confirm Salary</button>
+            <p id="left-amount">Money Left: ₹0</p>
+        </div>
+
+        <!-- ADD EXPENSE CARD -->
+        <div class="card">
+            <h2>Add Expense</h2>
+            <label>Expense Category</label>
+            <input id="item" type="text" placeholder="e.g. Food, Travel, Shopping">
+
+            <label>Amount</label>
+            <input id="amount" type="number" placeholder="Enter amount">
+
+            <button class="btn" onclick="addExpense()">Add Expense</button>
+        </div>
+
+        <!-- CHART CARD -->
+        <div class="card">
+            <h2>Your Spending Chart</h2>
+            <canvas id="expenseChart"></canvas>
+        </div>
+
+        <!-- EXPENSE LIST CARD -->
+        <div class="card">
+            <h2>Expense List</h2>
+            <ul id="expense-list"></ul>
+
+            <button class="btn" onclick="downloadPDF()">Download PDF</button>
+        </div>
+
+    </div>
+    <div class="how-card">
+        <h2>How to Use This Budget Planner</h2>
+    
+        <div class="steps">
+    
+            <div class="step">
+                <div class="icon">💼</div>
+                <h3>1. Enter Salary</h3>
+                <p>Type your monthly income in the Salary section and click <b>Confirm Salary</b>.</p>
+            </div>
+    
+            <div class="step">
+                <div class="icon">📝</div>
+                <h3>2. Add Your Expenses</h3>
+                <p>Fill in the category (Food, Travel, etc.) and the amount you spent. Then click <b>Add Expense</b>.</p>
+            </div>
+    
+            <div class="step">
+                <div class="icon">💰</div>
+                <h3>3. Track Remaining Money</h3>
+                <p>The app shows how much money is left for the month in real-time.</p>
+            </div>
+    
+            <div class="step">
+                <div class="icon">📊</div>
+                <h3>4. Check Your Chart</h3>
+                <p>View an auto-updating pie chart that displays where your money is going.</p>
+            </div>
+    
+            <div class="step">
+                <div class="icon">📄</div>
+                <h3>5. Download PDF Report</h3>
+                <p>Get a complete PDF report of your expenses with one click.</p>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
